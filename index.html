@@ -16,18 +16,26 @@
     body {
         background-color: hsl(0, 0%, 95%);
         font-size: 15px;
+        min-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+  /*  .contanier {
+    display: grid;
+    grid-template: repeat(2, 100px) / repeat(2, 100px);
+    grid-auto-flow: column;  Agrega automaticamente columnas 
+    grid-auto-flow: row;  Agrega automaticamente Filas 
+    grid-auto-columns: 100px;  Define el tamaño de columnasa que se agregaran automaticamente
+    grid-auto-rows: 100px; Define el tamaño de las filas que se agregaran automaticamente 
+} */
     .container {
-      height: 100vh;
+      height: 500px;
+     width: 450px;
       display: grid;
-      grid-template-columns: repeat(5, 20%);
-      grid-template-rows: repeat(5, 20%);
-      grid-template-areas:
-       " . . . . . "
-     " . Sedans SUVs Luxury ."
-     " . Sedans SUVs Luxury . "
-     " . Sedans SUVs Luxury . "
-     " . . . . . ";
+      grid-template-columns: 1fr 1fr 1fr;
+
     }
     div {
       display: inline-block;
@@ -35,15 +43,12 @@
       padding: 45px;
     }
     .Sedans {
-      grid-area: Sedans;
      background-color: hsl(31, 77%, 52%);
     }
     .SUVs {
-      grid-area: SUVs;
       background-color:  hsl(184, 100%, 22%);
     }
     .Luxury {
-      grid-area: Luxury;
        background-color: hsl(179, 100%, 13%);
     }
     h2 {
@@ -113,9 +118,9 @@ font-family: 'Lexend Deca', sans-serif; */
               </button>
           </div>
       </section>
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Martín Bustamante</a>.
-  </div>
+  </div> -->
 </body>
 </html>|
